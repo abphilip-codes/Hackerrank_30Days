@@ -8,9 +8,6 @@ import random
 import re
 import sys
 
-
-
 if __name__ == '__main__':
     n = int(input().strip())
-    print(len(max(bin(n)[2:].split('0'))))
-        
+    print(len(max(bin(n)[2:].split('0')))) 
