@@ -18,7 +18,7 @@ class Student(Person):
     #   id - An integer denoting the Person's ID number.
     #   scores - An array of integers denoting the Person's test scores.
     #
-    # Write your constructor here
+    #   Write your constructor here
     def __init__(self,f,l,ids,s):
         self.firstName = f
         self.lastName = l
@@ -28,7 +28,7 @@ class Student(Person):
     #   Function Name: calculate
     #   Return: A character denoting the grade.
     #
-    # Write your function here
+    #   Write your function here
     def calculate(self):
         z = sum(self.scores)/len(self.scores)
         if(z>=90): return 'O'
