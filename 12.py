@@ -1,13 +1,13 @@
 # https://www.hackerrank.com/challenges/30-inheritance/problem
 
 class Person:
-	def __init__(self, firstName, lastName, idNumber):
-		self.firstName = firstName
-		self.lastName = lastName
-		self.idNumber = idNumber
-	def printPerson(self):
-		print("Name:", self.lastName + ",", self.firstName)
-		print("ID:", self.idNumber)
+    def __init__(self, firstName, lastName, idNumber):
+	    self.firstName = firstName
+	    self.lastName = lastName
+	    self.idNumber = idNumber
+    def printPerson(self):
+	    print("Name:", self.lastName + ",", self.firstName)
+	    print("ID:", self.idNumber)
 
 class Student(Person):
     #   Class Constructor
@@ -18,17 +18,15 @@ class Student(Person):
     #   id - An integer denoting the Person's ID number.
     #   scores - An array of integers denoting the Person's test scores.
     #
-    #   Write your constructor here
+    # Write your constructor here
     def __init__(self,f,l,ids,s):
-        self.firstName = f
-        self.lastName = l
-        self.idNumber = ids
+        Person.__init__(self,f,l,ids)
         self.scores = s     
     
     #   Function Name: calculate
     #   Return: A character denoting the grade.
     #
-    #   Write your function here
+    # Write your function here
     def calculate(self):
         z = sum(self.scores)/len(self.scores)
         if(z>=90): return 'O'
