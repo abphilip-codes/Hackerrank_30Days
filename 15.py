@@ -13,14 +13,14 @@ class Solution:
 
     def insert(self,head,data): 
         #Complete this method
-        new = Node(data)
+        n = Node(data)
         if head == None:
-            return new
+            return n
         else:
             p = head   
             while p.next != None:
                 p = p.next
-            p.next = new    
+            p.next = n    
             return head    
 
 mylist= Solution()
@@ -29,4 +29,4 @@ head=None
 for i in range(T):
     data=int(input())
     head=mylist.insert(head,data)    
-mylist.display(head);
+mylist.display(head); 	  
