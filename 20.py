@@ -11,10 +11,8 @@ import sys
 if __name__ == '__main__':
     n = int(input().strip())
     a = list(map(int, input().rstrip().split()))
-    numswaps = 0
+    num = 0
     for i in range(0,n):
         for j in range(0,n-1):
-            if (a[j]>a[j+1]):
-                a[j],a[j+1]=a[j+1],a[j]
-                numswaps+=1
-    print("Array is sorted in {} swaps.\nFirst Element: {}\nLast Element: {}".format(numswaps,a[0],a[-1]))
+            if (a[j]>a[j+1]): a[j],a[j+1],num=a[j+1],a[j],num+1
+    print("Array is sorted in {} swaps.\nFirst Element: {}\nLast Element: {}".format(num,a[0],a[-1]))
