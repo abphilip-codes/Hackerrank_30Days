@@ -16,7 +16,7 @@ class Printer <T> {
     }
 }
 
-public class Generics {
+class Generics {
     
     public static void main(String args[]){
         Scanner scanner = new Scanner(System.in);
@@ -39,5 +39,6 @@ public class Generics {
         if(Printer.class.getDeclaredMethods().length > 1){
             System.out.println("The Printer class should only have 1 method named printArray.");
         }
+        scanner.close();
     } 
 }
